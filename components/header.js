@@ -23,7 +23,7 @@ const Header = () => {
       <Link href="/" passHref>
         <span style={router.pathname === "/" ? styles.active : styles.link}>Accueil</span>
       </Link>
-      <Link href="/blog" passHref>
+      <Link href="/details-region" passHref>
         <span style={styles.link}>Details regions</span>
       </Link>
       <Link href="/apropos" passHref>

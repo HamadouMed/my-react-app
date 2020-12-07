@@ -25,7 +25,6 @@ const Apropos = () => {
       </Head>
       <Layout>
         <div className="container">
-        <img className="w-100 h-30" src="/dj.jpg" style={styles.img}/>
             <div style={styles.main}>
               <h1>A propos</h1>
               <p>

@@ -5,7 +5,7 @@ import axios from "axios";
 import Head from "next/head";
 
 
-const Blog = ({posts}) => {
+const Blog = ({data}) => {
 
   const styles = {
     main: {
@@ -27,18 +27,19 @@ const Blog = ({posts}) => {
       </Head>
       <Layout>
         <div className="container">
-        <img className="w-100 h-30" src="/dj.jpg" style={styles.img}/>
         {
-          posts.map(post => (
-            <div style={styles.main} key={post._id}>
-              <h1>{post.title}</h1>
+          data.map(detail => (
+            <div style={styles.main} key={detail.id}>
+              <h1>{detail.region.nomRegion}</h1>
               <div>
-                <Link href="/blog/[id]" as={`/blog/${post._id}`} passHref>
-                  <img src={post.pictures[0]} style={styles.img} />
-                </Link>
+                { 
+                <Link href="/details-region/[id]" as={`/details-region/${detail.region.id}`} passHref>
+                  <img src={detail.region.pathPictures} style={styles.img} />
+                </Link> 
+                }
               </div>
               <div>
-                {post.body}
+                {detail.description}
               </div>
             </div>
           ))
@@ -50,13 +51,10 @@ const Blog = ({posts}) => {
 }
 
 export const getStaticProps = async (context) => {
-  // url dans le fichier .env
-  //https://aqueous-meadow-07678.herokuapp.com";
-  const {data} = await axios.get(`${process.env.API_POSTS}/api/posts`);
-  const posts = data.data;
+  const {data} = await axios.get(`${process.env.API_REGIONS}/details/regions`);
   return {
     props: {
-      posts
+      data
     }
   }
 }

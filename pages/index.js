@@ -27,14 +27,10 @@ const Home = ({data}) => {
       <img className="d-block w-100" src="/dj.jpg" alt="Second slide" style={styles.img}/>
       <br/>
       {data.map(region => (
-        <div key={region.code} style={styles.main}>
-          {/* <Link href="/region/[code]" as={`/region/${region.code}`} passHref> */}
-            <h3>{region.nom}</h3>
-          {/* </Link> */}
-          <p>Nombre d'habitant : {region.code}</p>
-          <p>Superficie : {region.code}</p>
-          <p>Nombre d'habitant : {region.code}</p>
-          <p>Nombre d'habitant : {region.code}</p>
+        <div key={region.id} style={styles.main}>
+            <h3>Nom de la ville : {region.nomRegion}</h3>
+          <p>Superficie : {region.superficie} </p>
+          <p>Nombre d'habitant : {region.nbHabitants}</p>
         </div>
       ))}
       </div>
@@ -44,9 +40,7 @@ const Home = ({data}) => {
 }
 
 export const getServerSideProps = async (context) => {
-  // url dans le fichier .env
-  //const urlBase = "https://geo.api.gouv.fr";
-  const {data} = await axios.get(`${process.env.API_GEO}/regions`);
+  const {data} = await axios.get(`${process.env.API_REGIONS}/regions`);
   return {
     props: {
       data
