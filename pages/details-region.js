@@ -11,12 +11,12 @@ const Blog = ({data}) => {
     main: {
       padding: 20,
       margin: 20,
-      borderBottom: "1px solid blue"
+      border: "2px solid #4ca1af"
     },
     img: {
       height: 200,
       width: 300,
-      float: "right"
+      float: "left"
     }
   }
 

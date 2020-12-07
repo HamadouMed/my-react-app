@@ -8,7 +8,8 @@ const Header = () => {
       header: {
         margin: 20,
         padding: 20,
-        border: "1px solid #DDD"
+        border: "3px solid black",
+        background: "#4ca1af"
       },
       link: {
         margin: 15

@@ -5,20 +5,37 @@ import Head from "next/head";
 
 
 const DetailRegion = ({data}) => {
+  const styles = {
+    info: {
+      padding: 20,
+      margin: 20,
+      border: "3px solid #4ca1af"
+    },
+    details: {
+      padding: 20,
+      margin: 20,
+      border: "3px solid #4ca1af"
+    }
+  }
+
   return (
     <>
     {
       data && (
         <>
         <Head>
-           <title>{data.description}</title>
+           <title>{data.region.nomRegion}</title>
         </Head>
         <Layout>
         <div className="container">
           <h1>{data.region.nomRegion}</h1>
-          <p><h3>Information sur la ville : </h3><br/>{data.description}</p>
-          <p><h3>Plus de details :</h3></p><br/>
-          <div>
+          <br/>
+          <h3>Information sur la ville : </h3>
+          <div style={styles.info}>
+            {data.description}
+          </div>
+          <h3>Plus de details :</h3>
+          <div style={styles.details}>
             <ul>
               <li>Supercifie : {data.region.superficie}</li>
               <li>Nombres d'habitants : {data.region.nbHabitants}</li>

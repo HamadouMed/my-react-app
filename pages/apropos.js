@@ -9,7 +9,7 @@ const Apropos = () => {
     main: {
       padding: 20,
       margin: 20,
-      borderBottom: "1px solid blue"
+      borderBottom: "1px solid #4ca1af"
     },
     img: {
       height: 200,

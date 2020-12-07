@@ -9,7 +9,7 @@ const Home = ({data}) => {
     main: {
       padding: 20,
       margin: 20,
-      borderBottom: "1px solid #DDD"
+      border: "2px solid #4ca1af"
     },
     img: {
       height: 400,
