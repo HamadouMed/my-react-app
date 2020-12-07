@@ -27,6 +27,7 @@ const Blog = ({data}) => {
       </Head>
       <Layout>
         <div className="container">
+        <h4>"Cliquez sur la photo pour plus d'infos"</h4>
         {
           data.map(detail => (
             <div style={styles.main} key={detail.id}>
