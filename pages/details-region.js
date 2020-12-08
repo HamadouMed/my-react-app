@@ -40,7 +40,7 @@ const Blog = ({data}) => {
                 }
               </div>
               <div>
-                {detail.description}
+                {detail.region.description}
               </div>
             </div>
           ))

@@ -30,9 +30,9 @@ const DetailRegion = ({data}) => {
         <div className="container">
           <h1>{data.region.nomRegion}</h1>
           <br/>
-          <h3>Information sur la ville : </h3>
+          <h3>Petite resumé : </h3>
           <div style={styles.info}>
-            {data.description}
+            {data.region.description}
           </div>
           <h3>Plus de details :</h3>
           <div style={styles.details}>
@@ -40,6 +40,12 @@ const DetailRegion = ({data}) => {
               <li>Supercifie : {data.region.superficie}</li>
               <li>Nombres d'habitants : {data.region.nbHabitants}</li>
               <li>Sous regions : {data.region.sousRegions}</li>
+            </ul>
+          </div>
+          <h3>Loisirs :</h3>
+          <div style={styles.details}>
+            <ul>
+              <li>Nom Loisir : {data.nomLoisir}</li>
             </ul>
           </div>
         </div>

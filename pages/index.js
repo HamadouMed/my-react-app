@@ -22,15 +22,13 @@ const Home = ({data}) => {
      <title>Accueil</title>
    </Head>
     <Layout>
-      {/* <Carousel /> */}
       <div className="container">
       <img className="d-block w-100" src="/dj.jpg" alt="Second slide" style={styles.img}/>
       <br/>
       {data.map(region => (
         <div key={region.id} style={styles.main}>
-            <h3>Nom de la ville : {region.nomRegion}</h3>
-          <p>Superficie : {region.superficie} </p>
-          <p>Nombre d'habitant : {region.nbHabitants}</p>
+            <h3>{region.nomRegion}</h3>
+          <p>Superficie : {region.description} </p>
         </div>
       ))}
       </div>
