@@ -27,7 +27,7 @@ const Blog = ({data}) => {
       </Head>
       <Layout>
         <div className="container">
-        <h4>"Cliquez sur la photo pour plus d'infos"</h4>
+        <h4>"Cliquez sur la photo pour plus d'information"</h4>
         {
           data.map(detail => (
             <div style={styles.main} key={detail.id}>

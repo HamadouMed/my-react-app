@@ -28,7 +28,7 @@ const Home = ({data}) => {
       {data.map(region => (
         <div key={region.id} style={styles.main}>
             <h3>{region.nomRegion}</h3>
-          <p>Superficie : {region.description} </p>
+          <p>{region.description} </p>
         </div>
       ))}
       </div>

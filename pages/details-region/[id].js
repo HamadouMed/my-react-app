@@ -3,7 +3,6 @@ import Layout from "../../components/layout";
 import axios from 'axios';
 import Head from "next/head";
 
-
 const DetailRegion = ({data}) => {
   const styles = {
     info: {
@@ -30,7 +29,7 @@ const DetailRegion = ({data}) => {
         <div className="container">
           <h1>{data.region.nomRegion}</h1>
           <br/>
-          <h3>Petite resumé : </h3>
+          <h3>Petit resumé : </h3>
           <div style={styles.info}>
             {data.region.description}
           </div>
@@ -45,7 +44,7 @@ const DetailRegion = ({data}) => {
           <h3>Loisirs :</h3>
           <div style={styles.details}>
             <ul>
-              <li>Nom Loisir : {data.nomLoisir}</li>
+              <li>{data.nomLoisir}</li>
             </ul>
           </div>
         </div>

@@ -26,7 +26,7 @@ const Apropos = () => {
       <Layout>
         <div className="container">
             <div style={styles.main}>
-              <h1>A propos</h1>
+              <h1>A propos du site</h1>
               <p>
               What is Lorem Ipsum?
               Lorem Ipsum is simply dummy text of the printing and typesetting industry.
